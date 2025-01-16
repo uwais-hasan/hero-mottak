@@ -79,12 +79,17 @@ function ResponsiveAppBar() {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography color='secondary' sx={{textAlign: 'center'}}>{page}</Typography>
+                                    <Typography
+                                        component={NavLink}
+                                        to={page} color='secondary'
+                                        sx={{textAlign: 'center',textDecoration:'none'}}>{page}
+                                    </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
                     <img style={{width: '100px'}} src={'hero.webp'}/>
+
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex', justifyContent: 'flex-end'}}}>
                         {pages.map((page) => (
                                 <Button
@@ -98,6 +103,7 @@ function ResponsiveAppBar() {
                             </Button>
                         ))}
                     </Box>
+
                     <Box sx={{flexGrow: 0}}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} style={{padding: '0px 0px 0px 15px'}}>
