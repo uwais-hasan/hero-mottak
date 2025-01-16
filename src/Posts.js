@@ -8,7 +8,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
-import CardProject from "./PostsAdmin";
+import CardProject from "./PostsAdmin/PostsAdmin";
 import Complaints from "./Complaints";
 import CreatePosts from "./CreatePosts";
 
@@ -59,6 +59,13 @@ export default function Posts({name, profilePicture}) {
             </Box>
             <CustomTabPanel style={{display:'flex',justifyContent:'center',width:'100%',gap:'20px'}} value={value} index={0}>
                 <CreatePosts style={{display:'flex',justifyContent:'center'}} profilePicture={profilePicture} name={'what you are thinking?'}/>
+
+                <CardProject style={{width:'100%'}}
+                             name="hilde joe"
+                             profilePicture="path/to/profile_picture.jpg"
+                             content="Each of these rooms has a post "
+                             img={'ew.jpg'}
+                />
 
                 <CardProject style={{width:'100%'}}
                     name="Aos Aos"

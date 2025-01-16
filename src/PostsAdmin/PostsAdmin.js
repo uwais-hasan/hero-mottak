@@ -5,8 +5,8 @@
 import * as React from 'react';
 import { Avatar, Card, CardContent, Typography } from '@mui/material';
 
-
-const CardProject = ({ name, profilePicture, content,img }) => {
+import './PostsAdmin.css'
+const PostsAdmin = ({ name, profilePicture, content,img }) => {
     return (
         <Card style={{width:'100%'}} >
             <CardContent style={{width:'97%'}}>
@@ -20,10 +20,10 @@ const CardProject = ({ name, profilePicture, content,img }) => {
                     {content}
                 </Typography>
 
-                <img style={{width:'100%'}}  src={img}/>
+                <img className={img}  src={img}/>
             </CardContent>
         </Card>
     );
 };
 
-export default CardProject;
+export default PostsAdmin;
