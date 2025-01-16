@@ -88,7 +88,7 @@ function ResponsiveAppBar() {
                             ))}
                         </Menu>
                     </Box>
-                    <img style={{width: '100px'}} src={'hero.webp'}/>
+                    <img style={{width: '100px',height:'auto'}} src={'hero.webp'}/>
 
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex', justifyContent: 'flex-end'}}}>
                         {pages.map((page) => (
