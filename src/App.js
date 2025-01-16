@@ -3,7 +3,7 @@ import Navbar from "./NavBar";
 import Header from "./Header";
 import {Route, Routes} from "react-router-dom";
 import About from "./About";
-import Refugees from "./Refugees";
+import Refugees from "./Refugees/Refugees";
 import {Alert} from "@mui/material";
 
 

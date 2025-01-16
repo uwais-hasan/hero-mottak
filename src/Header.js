@@ -1,14 +1,48 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 import './header.css';
 
+// import 'swiper/css';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import Container from "@mui/material/Container";
+
+const img=['hero-4.jpg','hero-2.jpg','hero-3.jpg','hero-1.jpg',]
+// {/*<div className="image-area">*/}
+// {/*    <img src="xzz.jpg" alt="Cozy Table Setting"/>*/}
+// {/*</div>*/}
 const Header = () => {
     return (
-        <div className="container">
-            <div className="image-area">
-                <img src="xzz.jpg" alt="Cozy Table Setting"/>
-            </div>
 
-        </div>
+
+          <Container>
+              <Swiper
+                  spaceBetween={30}
+                  centeredSlides={true}
+                  autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                  }}
+                  modules={[Autoplay]}
+                  className="mySwiper "
+              >
+                  {img.map(item=>{
+                      return(
+                          <SwiperSlide className="image-area"  key={Math.random()*1}>
+                              <img  src={item}   />
+                          </SwiperSlide>
+                      )
+                  })}
+
+
+              </Swiper>
+          </Container>
+
+
     );
 }
 export default Header;
