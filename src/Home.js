@@ -41,7 +41,7 @@ function a11yProps(index) {
     };
 }
 
-export default function Posts({name, profilePicture}) {
+export default function Home({name, profilePicture}) {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -52,7 +52,7 @@ export default function Posts({name, profilePicture}) {
         <Box sx={{ width: '100%' }} style={{background:'#fcfcfc'}}>
             <Box >
                 <Tabs textColor="secondary" indicatorColor="secondary" centered={true} value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab  sx={{ borderBottom: 1,width:'50%'}}  label="Posts" {...a11yProps(0)} />
+                    <Tab  sx={{ borderBottom: 1,width:'50%'}}  label="Home" {...a11yProps(0)} />
                     <Tab sx={{ borderBottom: 1,width:'50%',color:'secondary' }}  label="Complaints" {...a11yProps(1)} />
 
                 </Tabs>

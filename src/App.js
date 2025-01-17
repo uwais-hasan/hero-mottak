@@ -1,4 +1,4 @@
-import Posts from "./Posts";
+import Home from "./Home";
 import Navbar from "./NavBar";
 import Header from "./Header";
 import {Route, Routes} from "react-router-dom";
@@ -10,14 +10,11 @@ import {Alert} from "@mui/material";
 function App() {
   return (
     <div className="App">
-        <Navbar />
+
         <Alert severity="success">Please visit the About page for site information..</Alert>
         <Header />
         <Routes >
-            <Route path="/">
-                <Route index path="/" element={<Posts/>}/>
-
-            </Route>
+                <Route index path="/" element={<Home/>}/>
         </Routes>
 
 

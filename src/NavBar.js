@@ -18,7 +18,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {useState} from "react";
 import {NavLink} from "react-router-dom";
 
-const pages = ['Admins', 'Refugees', 'About','Dashboard'];
+const pages = ['Home','Admins', 'Refugees', 'About','Dashboard'];
 const settings = ['Log out'];
 const color={
     text1:'secondary',
@@ -38,6 +38,8 @@ function ResponsiveAppBar() {
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
+
+
     };
 
     const handleCloseUserMenu = () => {
@@ -81,7 +83,7 @@ function ResponsiveAppBar() {
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography
                                         component={NavLink}
-                                        to={page} color='secondary'
+                                        to={page!=='Home'?page:'/'} color='secondary'
                                         sx={{textAlign: 'center',textDecoration:'none'}}>{page}
                                     </Typography>
                                 </MenuItem>
@@ -94,7 +96,7 @@ function ResponsiveAppBar() {
                         {pages.map((page) => (
                                 <Button
                                     component={NavLink}
-                                    to={page}
+                                    to={page!=='Home'?page:'/'}
                                 key={page}
                                 onClick={handleCloseNavMenu}
                                 sx={{my: 2, display: 'block', color: color.text2}}

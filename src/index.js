@@ -6,11 +6,14 @@ import About from "./About";
 import Refugees from "./Refugees/Refugees";
 import Admins from "./Admins";
 import Dashboard from "./dashboard";
+import Navbar from "./NavBar";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
 <BrowserRouter>
+    <Navbar />
     <Routes>
         <Route path="/" element={<App />} />
         <Route path="/About" element={<About/>}/>
