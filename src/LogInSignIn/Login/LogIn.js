@@ -6,25 +6,28 @@ import './LogIn.css'
 import {Link, NavLink, useNavigate} from "react-router-dom";
 import {useState} from "react";
 const LogIn = () => {
-    const [email, setEmail] = useState("");
-    const [password,setPassword]=useState()
+    const [email, setEmail] = useState("Hero@hero.com");
+    const [password,setPassword]=useState('123')
     const[errorEmail,setErrorEmail]=useState('')
     const[errorPassword,setErrorPassword]=useState('')
 
     let navigator=useNavigate()
 
     const handleSubmit = () => {
-        if (email === "hero@hero.com" || password === 123) {
+        if (email === "Hero@hero.com" && password === '123') {
             navigator('/')
             localStorage.setItem("Success","Success")
-        } else if (errorEmail !== "hero@hero.con" ) {
+            console.log('1')
+        } else if (email !== "Hero@hero.com" ) {
             setErrorEmail('please enter a valid email')
+            console.log('2')
 
-        } else if (errorPassword !== 123) {
+        } else if (password !== 123) {
             setErrorPassword('please enter a valid password')
+            console.log('3')
         }
 
-        console.log({errorPassword, errorEmail})
+        console.log({email, password})
     }
 
 
