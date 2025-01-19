@@ -16,6 +16,7 @@ const LogIn = () => {
     const handleSubmit = () => {
         if (email === "hero@hero.com" || password === 123) {
             navigator('/')
+            localStorage.setItem("Success","Success")
         } else if (errorEmail !== "hero@hero.con" ) {
             setErrorEmail('please enter a valid email')
 

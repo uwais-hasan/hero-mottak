@@ -16,7 +16,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import {useState} from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 const pages = ['Home','Admins', 'Refugees', 'About','Dashboard'];
 const settings = ['Log out'];
@@ -29,6 +29,8 @@ function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
 
+
+    const navigate=useNavigate()
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -45,6 +47,12 @@ function ResponsiveAppBar() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
+    const handleLogIn=()=>{
+        if (localStorage.getItem('Success')){
+            navigate('/logIn')
+        }
+    }
 
     return (
         <AppBar position="static"  color='none' style={{boxShadow: 'none',marginBottom:"20px"}}>
@@ -130,7 +138,7 @@ function ResponsiveAppBar() {
                         >
                             {settings.map((setting) => (
                                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography color={'secondary'} sx={{textAlign: 'center'}}>{setting}</Typography>
+                                    <Typography onClick={handleLogIn} color={'secondary'} sx={{textAlign: 'center'}}>{setting}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
