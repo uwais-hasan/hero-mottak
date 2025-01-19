@@ -30,7 +30,7 @@ const LogIn = () => {
 
     return (
         <>
-            <Alert severity="success">Please make sure to enter this data to log in. Email:hero@hero.com , password:123 </Alert>
+            <Alert severity="success">Please make sure to enter this data to log in. Email: Hero@hero.com , password:123 </Alert>
             <Container style={{paddingTop: "30px"}} className='register'>
                 <Grid container spacing={2} columns={{xs: 6, sm: 12, md: 12}} justifyContent='space-between'>
                     <Grid item xs={6} sm={6} md={8} style={{paddingTop: '0', position: 'relative'}}>
