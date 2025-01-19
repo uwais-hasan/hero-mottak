@@ -9,9 +9,9 @@ import {Alert} from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{position:'relative'}}>
 
-        <Alert severity="success">Please visit the About page for site information..</Alert>
+        <Alert  severity="success">Please visit the About page for site information..</Alert>
         <Header />
         <Routes >
                 <Route index path="/" element={<Home/>}/>

@@ -11,7 +11,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Container from "@mui/material/Container";
 
-const img=['hero-4.jpg','hero-2.jpg','hero-3.jpg','hero-1.jpg',]
+// const img=['hero-4.jpg','hero-2.jpg','hero-3.jpg','hero-1.jpg',]
+const img=['img-1.png','img-2.png','img-3.png','img-4.png','img-5.png',]
+
 // {/*<div className="image-area">*/}
 // {/*    <img src="xzz.jpg" alt="Cozy Table Setting"/>*/}
 // {/*</div>*/}
@@ -21,10 +23,10 @@ const Header = () => {
 
           <Container>
               <Swiper
-                  spaceBetween={30}
+                  spaceBetween={2}
                   centeredSlides={true}
                   autoplay={{
-                      delay: 2500,
+                      delay: 4000,
                       disableOnInteraction: false,
                   }}
                   modules={[Autoplay]}

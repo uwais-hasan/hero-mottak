@@ -52,12 +52,12 @@ export default function Home({name, profilePicture}) {
         <Box sx={{ width: '100%' }} style={{background:'#fcfcfc'}}>
             <Box >
                 <Tabs textColor="secondary" indicatorColor="secondary" centered={true} value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab  sx={{ borderBottom: 1,width:'50%'}}  label="Home" {...a11yProps(0)} />
-                    <Tab sx={{ borderBottom: 1,width:'50%',color:'secondary' }}  label="Complaints" {...a11yProps(1)} />
+                    <Tab  sx={{ borderBottom: 1,width:'50%'}}  label="Posts" {...a11yProps(0)} />
+                    <Tab sx={{ borderBottom: 1,width:'50%',color:'secondary' }}  label="Feedback" {...a11yProps(1)} />
 
                 </Tabs>
             </Box>
-            <CustomTabPanel style={{display:'flex',justifyContent:'center',width:'100%',gap:'20px'}} value={value} index={0}>
+            <CustomTabPanel style={{width:'100%',gap:'20px'}} value={value} index={0}>
                 <CreatePosts style={{display:'flex',justifyContent:'center'}} profilePicture={profilePicture} name={'what you are thinking?'}/>
 
                 <CardProject style={{width:'100%'}}
@@ -80,7 +80,7 @@ export default function Home({name, profilePicture}) {
                              img={'xz.jpg'}
                 />
             </CustomTabPanel>
-            <CustomTabPanel style={{display:'flex',justifyContent:'center',width:'100%',gap:'20px'}} value={value} index={1}>
+            <CustomTabPanel style={{width:'100%',gap:'20px'}} value={value} index={1}>
                 <CreatePosts style={{display:'flex',justifyContent:'center'}} profilePicture={profilePicture} name={'what you are thinking?'}/>
 
                 <Complaints style={{width:'100%'}}

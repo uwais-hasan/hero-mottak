@@ -2,17 +2,12 @@
 
 
 
-
-
-
-
-import * as React from 'react';
 import { Avatar, Card, CardContent, Typography } from '@mui/material';
 
 const Complaints = ({ name, profilePicture, content,img }) => {
     return (
-        <Card style={{width:'100%'}} >
-            <CardContent style={{width:'97%'}}>
+        <Card style={{width:'100%',padding:'10px'}} className='posts' >
+            <CardContent >
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <Avatar src={profilePicture} />
                     <Typography variant="body2" sx={{ marginLeft: '1rem' }}>
@@ -23,7 +18,7 @@ const Complaints = ({ name, profilePicture, content,img }) => {
                     {content}
                 </Typography>
 
-                <img style={{width:'100%'}} src={img}/>
+                <img  src={img}/>
             </CardContent>
         </Card>
     );
