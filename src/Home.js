@@ -11,6 +11,8 @@ import Box from '@mui/material/Box';
 import CardProject from "./PostsAdmin/PostsAdmin";
 import Complaints from "./Complaints";
 import CreatePosts from "./CreatePosts";
+import {useNavigate} from "react-router-dom";
+import {useEffect} from "react";
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -47,6 +49,16 @@ export default function Home({name, profilePicture}) {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    const navigate=useNavigate()
+
+    useEffect(() => {
+        if (localStorage.getItem("Success")) {
+            navigate('/')
+        }else {
+            navigate('/logIn')
+        }
+    },[navigate])
 
     return (
         <Box sx={{ width: '100%' }} style={{background:'#fcfcfc'}}>
