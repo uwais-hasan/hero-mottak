@@ -1,0 +1,20 @@
+
+.content-title{
+    background: #333333;
+    padding: 10px!important;
+    height: 335px;
+    @media (max-width: 765px) {
+        height: auto;
+    }
+}
+
+.title{
+    background: #403c3c;
+    cursor: pointer;
+    padding: 15px;
+    color: white;
+}
+
+.title:hover{
+    background: #783384;
+}

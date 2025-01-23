@@ -50,7 +50,7 @@ import {Alert} from "@mui/material";
 import React, {useEffect} from "react";
 
 import Admins from "./Admins";
-import Dashboard from "./dashboard";
+import Dashboard from "./Dashboard/dashboard";
 import LogIn from "./LogInSignIn/Login/LogIn";
 import SignUp from "./LogInSignIn/SignUp/SignUp";
 
