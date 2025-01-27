@@ -36,11 +36,11 @@ function createData(name,img,email, data, role, ) {
 }
 
 const column = [
-    createData('uwais hasan', 'actor_1.jpg','uwais@gmail.com', '10-10-98', 'Admin', ),
-    createData('eric noje', 'actor_3.jpg', 'uwais@gmail.com', '10-10-98', 'supervisor',),
-    createData('selfester stalon', 'actor_5.gif', 'selfester@gmail.com', '10-10-98', 'supervisor', ),
-    createData('jon carry',  'actor_2.jpg','carry@gmail.com', '10-10-98', 'supervisor'),
-    createData('gerald folos',  'actor_3.jpg','gerald@gmail.com', '10-10-98', 'supervisor'),
+    createData('uwais hasan', 'actor_1.jpg','uwais@gmail.com', '10-10-98', 'refugee', ),
+    createData('eric noje', 'actor_3.jpg', 'uwais@gmail.com', '10-10-98', 'refugee',),
+    createData('selfester stalon', 'actor_5.gif', 'selfester@gmail.com', '10-10-98', 'refugee', ),
+    createData('jon carry',  'actor_2.jpg','carry@gmail.com', '10-10-98', 'refugee'),
+    createData('gerald folos',  'actor_3.jpg','gerald@gmail.com', '10-10-98', 'refugee'),
 ];
 // const columns = [
 //     {id: 0, name: 'one', img: 'red',email:'sss',data:'10-12-92',actions:{setAdmin:false,remove:false}},
